@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "sandbox"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [
+    { include = "app" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+uvicorn = "^0.23.2"
+langserve = {extras = ["server"], version = ">=0.0.30"}
+pydantic = "<2"
+jupyter = "^1.0.0"
+python-dotenv = "^1.0.1"
+langchain-community = "^0.2.3"
+pypdf = "^4.2.0"
+pinecone = "^4.0.0"
+langchain-openai = "^0.1.8"
+langchain-pinecone = "^0.1.1"
+pandas = "^2.2.2"
+tavily-python = "^0.3.3"
+langgraph = "^0.0.65"
+duckduckgo-search = "^6.1.7"
+langchainhub = "^0.1.20"
+langchain-google-community = {extras = ["places"], version = "^1.0.5"}
+
+
+[tool.poetry.group.dev.dependencies]
+langchain-cli = ">=0.0.15"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
